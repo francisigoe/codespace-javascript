@@ -1,0 +1,25 @@
+<!--made 7/9/24
+by francis igoe 
+displays a button and some text. When pressed, the button changes the texts coulor and background coulor-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset=utf-8 />
+        <title>Activity 1 - Vanilla JS DOM</title>
+            <!--when called changes the parigraphs coulor and background coulor-->
+            <script>
+                function js_style(){
+                    text = document.getElementById('text');
+                    text.style.color = "green";
+                    text.style.backgroundColor = "black";
+                }
+            </script>
+    </head> 
+    <body>
+        <p id ='text'>Vanilla JS DOM</p> 
+        <div>
+        <button id="jsstyle"
+        onclick="js_style()">Style</button>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!--made 7/9/24
+by francis igoe 
+creates a web page with an input box that finds the area of a sphere when given the radius-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset=utf-8 />
+        <title>Activity 2 - Vanilla JS DOM</title>
+            <!--when called calculates the area then displays it in a paragraph-->
+            <script>
+                function calc_area() {
+                  radius = document.getElementById("radius").value;
+                  document.getElementById("area").innerHTML = ("the area is: " + radius ** 2 * Math.PI);
+                }
+            </script>
+    </head> 
+    <body>
+        <form>
+            <!--asks for radius-->
+            <p id ='text'>input radius value and get the volume of a sphere</p> 
+            <label for="radius">enter radius:</label><input type="text" id="radius">
+            </input>
+            <p id="area">the area will show up here</p>
+            <div>
+            <button id="jsstyle" type="button"
+            onclick="calc_area()">Calculate</button>
+            </div>
+        </form>
+    </body>
+</html>
