@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset=utf-8 />
+        <title>Activity 2 - Vanilla JS DOM</title>
+            <!--when called calculates the area then displays it in a paragraph-->
+            <script>
+                function pick_computer_hand(){
+                    let hand = Math.floor(Math.random() * 3  + 1)
+                    if(hand == 1){
+                        hand = "rock"
+                    }
+                    else if(hand == 2){
+                        hand = "paper"
+                    }
+                    else{
+                        hand = "scisors"
+                    }
+                    return hand
+                }
+                    
+                function find_result(user_hand) {
+                    comp_hand = pick_computer_hand()
+                    document.getElementById("user").textContent = ("Your Choice: " + user_hand);
+                    document.getElementById("comp").textContent = ("Computer Choice: " + user_hand);
+                    if(user_hand == "scisors" & comp_hand == "paper" || user_hand == "paper" & comp_hand == "rock" || user_hand == "rock" & comp_hand == "scisors"){
+                        document.getElementById("result").textContent = ("You win!");
+                    } 
+                    else if(user_hand == comp_hand){
+                        document.getElementById("result").textContent = ("You tie.");
+                    }
+                    else{
+                        document.getElementById("result").textContent = ("You lost..");
+                    }
+                }
+            </script>
+    </head> 
+    <body>
+        <form>
+            <div>
+            <button id="rock" type="button"
+            onclick="find_result('rock')">rock</button>
+            <button id="paper" type="button"
+            onclick="find_result('paper')">paper</button>
+            <button id="scisors" type="button"
+            onclick="find_result('scisors')">scisors</button>
+            </div>
+            <h1 id="user"></h1>
+            <h1 id="comp"></h1>
+            <h1 id="result"></h1>
+        </form>
+    </body>
+</html>
